@@ -15,7 +15,8 @@ void countSort(vector<int> &arr) {
   }
 
   int size = max - min + 1;
-  int *counter = new int[size]{};
+  int counter[size];
+  for(int i = 0; i < size; i++) counter[i] = 0;
 
   for(auto&& el: arr) {
     counter[el - min]++;
