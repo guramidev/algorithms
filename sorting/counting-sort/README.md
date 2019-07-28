@@ -1,6 +1,6 @@
-### Counting Sort
-Effective when range of elements that are in unsorted array is known 
-is not that big, to avoid consuming huge amounts of memory.
+#### Counting Sort - Time Complexity - O(n + k)
+Effective when range of elements to sort is known 
+is not that big. 
 
-#### Time Complexity
-O(n + k)
+For example if range of elements is from 1 to n^2. Than complexity becomes
+O(n + n^2) which is the same as O(n^2) so this method becomes slow.
