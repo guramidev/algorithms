@@ -6,16 +6,15 @@ using namespace std;
 void countSort(vector<int> &arr) {
   // initialize counter
   map<int, int> counter;
-  int min = arr[0], max = arr[0];
   for (auto&& el: arr) {
     counter[el]++;
   }
 
   // replace arr elements with ordered ones using counter
   int k = 0;
-  for(map<int, int>::iterator c = counter.begin(); c != counter.end(); c++) {
-    for(int j = 0; j < c->second; j++) {
-      arr[k] = c->first;
+  for(auto&& [value, occurrenceCount]: counter) {
+    for(int j = 0; j < occurrenceCount; j++) {
+      arr[k] = value;
       k++;
     }
   }
